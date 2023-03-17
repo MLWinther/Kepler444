@@ -1,0 +1,15 @@
+# Don't include generateable files for/from fitting
+output*/
+all_combinations/input*
+stats/weight_plots/
+
+# Don't include grids and models
+*.hdf5
+*.fgong
+plotting/He3models
+
+# Temporary jsons
+*.json
+
+# Byte-compiled
+__pycache__/

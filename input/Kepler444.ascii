@@ -1,0 +1,2 @@
+# ID    Teff	Teff_err	logg    logg_err    FeH		FeH_err	LPhot   LPhot_err   rho     rho_err dnu		dnu_err	numax	numax_err	parallax	parallax_err	Mb_TYCHO	Mb_TYCHO_err	Mv_TYCHO	Mv_TYCHO_err	RA_GAIA	RA_GAIA_err	DEC_GAIA	DEC_GAIA_err    MeH     MeH_err LPhot   LPhot_err
+Kepler444	5172	75			4.56    0.18        -0.52	0.12	0.40    0.04        2.495   0.012   179.64	0.76	4538	144			27.357807	0.0124630		9.898		0.024			8.925		0.015			289.753	0.585037	41.631		0.0263488       -0.37   0.09    0.4     0.04

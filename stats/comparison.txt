@@ -1,0 +1,105 @@
+output_001_diffusion_FeH_Teff_r01_uncorr_trusted_3p
+ 1 & 0.899 & 0.535 & 1.338 & 2.415 & ${0.631}_{-0.261}^{+2.700}$ &  & $r_{01}$ & $3p$ &  & \transparent{0.4}x \ts\\
+
+output_002_diffusion_FeH_Teff_r01_uncorr_trusted_5p
+ 2 & 0.772 & 0.485 & 1.297 & 2.180 & ${0.641}_{-0.264}^{+2.773}$ &  & $r_{01}$ & $5p$ &  & \transparent{0.4}x \ts\\
+
+output_003_diffusion_FeH_Teff_r01_corr_trusted_3p
+ 3 & 0.610 & 0.526 & 1.310 & 2.322 & ${0.631}_{-0.262}^{+2.778}$ &  & $r_{01}$ & $3p$ &  & \checkmark \ts\\
+
+output_004_diffusion_FeH_Teff_r01_corr_trusted_5p
+ 4 & 1.014 & 0.614 & 1.672 & 2.804 & ${0.631}_{-0.263}^{+2.706}$ &  & $r_{01}$ & $5p$ &  & \checkmark \ts\\
+
+output_005_diffusion_FeH_Teff_r02_uncorr_trusted_3p
+ 5 & 1.037 & 0.684 & 1.441 & 1.838 & ${0.767}_{-0.368}^{+6.366}$ &  & $r_{02}$ & & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_006_diffusion_FeH_Teff_r02_uncorr_nottrusted_3p
+ 6 & 0.963 & 0.433 & 0.629 & 1.838 & ${0.713}_{-0.313}^{+5.307}$ &  & $r_{02}$ & & \checkmark & \transparent{0.4}x \ts\\
+
+output_007_diffusion_FeH_Teff_r02_corr_trusted_3p
+ 7 & 1.029 & 0.681 & 1.461 & 1.819 & ${0.767}_{-0.368}^{+6.366}$ &  & $r_{02}$ & & \transparent{0.4}x & \checkmark \ts\\
+
+output_008_diffusion_FeH_Teff_r02_corr_nottrusted_3p
+ 8 & 0.981 & 0.446 & 0.631 & 1.856 & ${0.713}_{-0.313}^{+5.307}$ &  & $r_{02}$ & & \checkmark & \checkmark \ts\\
+
+output_009_diffusion_FeH_Teff_r012_uncorr_trusted_3p
+ 9 & 1.025 & 0.687 & 1.388 & 2.180 & ${0.634}_{-0.257}^{+2.779}$ &  & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_010_diffusion_FeH_Teff_r012_uncorr_trusted_5p
+10 & 0.980 & 0.677 & 1.367 & 2.006 & ${0.636}_{-0.256}^{+2.777}$ &  & $r_{012}$ & $5p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_011_diffusion_FeH_Teff_r012_uncorr_nottrusted_3p
+11 & 0.850 & 0.515 & 1.069 & 2.219 & ${0.635}_{-0.256}^{+2.465}$ &  & $r_{012}$ & $3p$ & \checkmark & \transparent{0.4}x \ts\\
+
+output_012_diffusion_FeH_Teff_r012_uncorr_nottrusted_5p
+12 & 0.809 & 0.477 & 1.028 & 2.033 & ${0.634}_{-0.254}^{+2.466}$ &  & $r_{012}$ & $5p$ & \checkmark & \transparent{0.4}x \ts\\
+
+output_013_diffusion_FeH_Teff_r012_corr_trusted_3p
+13 & 1.022 & 0.642 & 1.438 & 2.887 & ${0.624}_{-0.253}^{+2.438}$ &  & $r_{012}$ & $3p$ & \transparent{0.4}x & \checkmark \ts\\
+
+output_014_diffusion_FeH_Teff_r012_corr_trusted_5p
+14 & 1.139 & 0.734 & 1.703 & 3.283 & ${0.613}_{-0.243}^{+2.329}$ &  & $r_{012}$ & $5p$ & \transparent{0.4}x & \checkmark \ts\\
+
+output_015_diffusion_FeH_Teff_r012_corr_nottrusted_3p
+15 & 0.809 & 0.466 & 1.177 & 2.965 & ${0.622}_{-0.245}^{+2.195}$ &  & $r_{012}$ & $3p$ & \checkmark & \checkmark \ts\\
+
+output_016_diffusion_FeH_Teff_r012_corr_nottrusted_5p
+16 & 0.894 & 0.527 & 1.395 & 3.412 & ${0.625}_{-0.248}^{+2.123}$ &  & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_017_diffusion_FeH_Teff_LPhot_r012_uncorr_trusted_3p
+17 & 2.003 & 1.489 & 1.846 & 2.288 & ${0.631}_{-0.260}^{+2.548}$ & \lphot & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_018_diffusion_FeH_Teff_LPhot_r012_corr_nottrusted_5p
+18 & 1.938 & 1.500 & 1.853 & 3.519 & ${0.609}_{-0.239}^{+2.074}$ & \lphot & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_019_diffusion_FeH_Teff_logg_r012_uncorr_trusted_3p
+19 & 1.027 & 0.689 & 1.716 & 2.490 & ${0.634}_{-0.257}^{+2.779}$ & $\log g$ & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_020_diffusion_FeH_Teff_logg_r012_corr_nottrusted_5p
+20 & 0.894 & 0.528 & 1.723 & 3.721 & ${0.624}_{-0.247}^{+2.124}$ & $\log g$ & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_021_diffusion_FeH_Teff_rho_r012_uncorr_trusted_3p
+21 & 1.172 & 0.862 & 1.473 & 2.231 & ${0.597}_{-0.249}^{+2.734}$ & $\rho$ & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_022_diffusion_FeH_Teff_rho_r012_corr_nottrusted_5p
+22 & 0.874 & 0.776 & 1.480 & 3.462 & ${0.592}_{-0.244}^{+2.150}$ & $\rho$ & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_023_diffusion_FeH_Teff_LPhot_logg_r012_uncorr_trusted_3p
+23 & 2.003 & 1.490 & 2.174 & 2.597 & ${0.631}_{-0.260}^{+2.548}$ & $\log g$,\,\lphot & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_024_diffusion_FeH_Teff_LPhot_logg_r012_corr_nottrusted_5p
+24 & 1.938 & 1.501 & 2.181 & 3.829 & ${0.610}_{-0.239}^{+2.074}$ & $\log g$,\,\lphot & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_025_diffusion_FeH_Teff_LPhot_rho_r012_uncorr_trusted_3p
+25 & 2.116 & 1.524 & 1.931 & 2.338 & ${0.579}_{-0.234}^{+2.169}$ & \lphot,\,$\rho$ & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_026_diffusion_FeH_Teff_LPhot_rho_r012_corr_nottrusted_5p
+26 & 2.036 & 1.532 & 1.938 & 3.570 & ${0.579}_{-0.232}^{+1.970}$ & \lphot,\,$\rho$ & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_027_diffusion_FeH_Teff_logg_rho_r012_uncorr_trusted_3p
+27 & 1.172 & 0.862 & 1.801 & 2.541 & ${0.597}_{-0.249}^{+2.734}$ & $\log g$,\,$\rho$ & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_028_diffusion_FeH_Teff_logg_rho_r012_corr_nottrusted_5p
+28 & 0.874 & 0.776 & 1.808 & 3.772 & ${0.592}_{-0.244}^{+2.150}$ & $\log g$,\,$\rho$ & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_029_diffusion_FeH_Teff_LPhot_logg_rho_r012_uncorr_trusted_3p
+29 & 2.117 & 1.525 & 2.259 & 2.648 & ${0.579}_{-0.233}^{+2.169}$ & $\log g$,\,\lphot,\,$\rho$ & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_030_diffusion_FeH_Teff_LPhot_logg_rho_r012_corr_nottrusted_5p
+30 & 2.036 & 1.533 & 2.266 & 3.879 & ${0.579}_{-0.232}^{+1.970}$ & $\log g$,\,\lphot,\,$\rho$ & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_031_diffusion_FeH_Teff_LPhot_logg_rho_r02_uncorr_trusted_3p
+31 & 2.278 & 1.578 & 2.312 & 2.306 & ${0.677}_{-0.314}^{+5.342}$ & $\log g$,\,\lphot,\,$\rho$ & $r_{02}$ & & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_032_diffusion_FeH_Teff_LPhot_logg_rho_r02_corr_nottrusted_5p
+32 & 1.320 & 1.119 & 1.502 & 2.323 & ${0.631}_{-0.267}^{+3.962}$ & $\log g$,\,\lphot,\,$\rho$ & $r_{02}$ & & \checkmark & \checkmark \ts\\
+
+output_033_diffusion_FeH_Teff_parallax_r012_uncorr_trusted_3p
+33 & 1.220 & 0.692 &  &  & ${0.633}_{-0.251}^{+3.119}$ & $\varpi$ & $r_{012}$ & $3p$ & \transparent{0.4}x & \transparent{0.4}x \ts\\
+
+output_034_diffusion_FeH_Teff_parallax_r012_corr_nottrusted_5p
+34 & 1.122 & 0.531 &  &  & ${0.612}_{-0.231}^{+2.182}$ & $\varpi$ & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
+output_035_diffusion_FeH_Teff_r012_corr_nottrusted_5p
+35 & 1.474 & 0.701 & 1.395 & 3.412 & ${0.406}_{-0.098}^{+0.301}$ &  & $r_{012}$ & $5p$ & \checkmark & \checkmark \ts\\
+
