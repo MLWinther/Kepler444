@@ -10,14 +10,17 @@ rcset = {'xtick.direction': u'in', 'ytick.direction': u'in',
          'font.family': 'sans-serif', 'font.size': 18}
 plt.rcParams.update(rcset)
 
+#############################################################################
+# Plot core evolution of ~600 Myr core lifetime models for referee response #
+# out: agecore600_test.pdf                                                  #
+#############################################################################
+
 
 Grid = h5py.File('../input/Garstec_AS09_Kepler444_diff.hdf5','r')
-Buldgen = np.loadtxt('../input/profile_Buldgen.txt', delimiter = ', ')
+Buldgen = np.loadtxt('../input/profile_Buldgen.txt', delimiter = ',')
 
-ypar = 'FeHini'
 
-_, labels, _, _ = constants.parameters.get_keys(['age', 'Mcore', 'gcut', 'ove', 
-                                                 'massini', ypar])
+_, labels, _, _ = constants.parameters.get_keys(['age', 'Mcore'])
 
 cols = ['#332288', '#88CCEE', '#44AA99', '#117733', '#999933', 
         '#DDCC77', '#CC6677', '#882255', '#AA4499']
@@ -32,8 +35,6 @@ for i, track in enumerate(tracks):
     ove = Grid[os.path.join(path, "ove")][0]
     if agecore > 550 and agecore < 650:
         k = 0
-    #elif ove < 1e-3:
-    #    k = 1
     else:
         continue
 

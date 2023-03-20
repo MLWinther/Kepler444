@@ -1,5 +1,8 @@
-import warnings
 import numpy as np
+
+#################################################################
+# Helper functions for reading garstec logfiles and fgong-files #
+#################################################################
 
 def read_garlog(filename, ver, *arguments):
     """

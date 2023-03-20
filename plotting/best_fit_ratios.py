@@ -18,6 +18,13 @@ plt.style.use(os.path.join(os.environ['BASTADIR'], 'basta/plots.mplstyle'))
 rcset = {'xtick.direction': u'in', 'ytick.direction': u'in', 'xtick.top':True, 'ytick.right':True, 'font.family': "sans-serif", "font.size":18}
 plt.rcParams.update(rcset)
 
+##################################################################################################
+# Plots the best-fit ratios and ratios from Buldgen 2019 compared to the observed for paper plot #
+# Reads the best-fit as the numbered output in all_combinations, default 16                      #
+# out: ratios.pdf                                                                                #
+##################################################################################################
+outputnumber = 16
+
 cols = ['#332288', '#88CCEE', '#44AA99', '#117733', '#999933', '#DDCC77', '#CC6677', '#882255', '#AA4499']
 
 top = '/home/au540782/Kepler444/'
@@ -28,10 +35,9 @@ Grid = h5py.File(gridfile, 'r')
 
 obskey, obs, _ = fio.read_freq(freqfile)
 obskeynot, obsnot, _ = fio.read_freq(freqfile, nottrustedfile="/home/au540782/Kepler444/input/nottrusted_Kepler444.fre")
-obsr012, obsr012cov, _ = freq_fit.compute_ratios(obskey, obs, "r012")
-obsr012not, obsr012notcov, _ = freq_fit.compute_ratios(obskeynot, obsnot, "r012")
+obsr012, obsr012cov = freq_fit.compute_ratios(obskey, obs, "r012")
+obsr012not, obsr012notcov = freq_fit.compute_ratios(obskeynot, obsnot, "r012")
 
-outputnumber = 16
 loc = glob.glob(os.path.join(top, 'all_combinations/output_{:03d}*'.format(outputnumber)))[0]
 desc = loc.split('{:03d}_'.format(outputnumber))[-1].split('/')[0]
 
@@ -78,7 +84,6 @@ ax[0].legend([l1,l2,l3,l4,l5],
              [r'Observed', r'Removed', r'HLM', r'$\mathcal{M}_{12}$', r'$\mathcal{M}_{13}$'],
              bbox_to_anchor=(0, 1.02, 1, 0.102), loc=8, mode="expand", borderaxespad=0, 
              ncol=5,fontsize=18,handletextpad=-0.3)
-#ax[1].legend([l4,l5], [r'$M_{12}$', r'$M_{13}$'], frameon=True)
 
 ax[1].set_xlabel(r'$\nu\,(\mu \mathrm{Hz})$')
 ax[0].set_ylabel(r'$r_{012}$')
@@ -92,4 +97,3 @@ fig.tight_layout()
 fig.subplots_adjust(hspace=0)
 fig.savefig('plots/ratios.pdf', dpi=300)
 plt.close()
-###########################################################

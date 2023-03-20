@@ -18,6 +18,10 @@ fmts = [int, int, float, float]
 # Set the style of all plots
 plt.style.use(os.path.join(os.environ['BASTADIR'], 'basta/plots.mplstyle'))
 
+########################################################
+# A mixed bag of helper function for plotting routines #
+########################################################
+
 class mixtures:
     """
     Quantities for the solar mixtures
@@ -236,7 +240,7 @@ def grid_freqs(grid, track, index, obs, obskey):
 def buldgen_log(m, pars):
     dat = np.loadtxt(os.path.join(top, 'input/Model{0}.log'.format(m)), comments='#')
     names = {'mod': 0, 'age': 1, 'Teff': 2, 'L': 3, 'Xc': 4, 'logg': 13, 
-             'ZXs': 14, 'RConv': 16, 'Zs': 17, 'Xs': 18}
+             'ZXs': 14, 'RConv': 16, 'Zs': 17, 'Xs': 18, 'He3': 22, 'Mcore': 21}
     dat[:,2] = 10**dat[:,2]
     dat[:,3] = 10**dat[:,3]
     columns = [names[p] for p in pars]

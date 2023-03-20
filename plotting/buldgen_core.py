@@ -6,6 +6,11 @@ from helpers import *
 rcset = {'xtick.direction': u'in', 'ytick.direction': u'in', 'xtick.top':True, 'ytick.right':True, 'font.family': "sans-serif", "font.size":18}
 plt.rcParams.update(rcset)
 
+###################################################################
+# Reproduces figure 7 from Buldgen 2019 as figure 1 in this paper #
+# out: core_buldgen.pdf                                           #
+###################################################################
+
 bmods = [13, 12]
 cols = ["#882255", "#88CCEE"]
 labels = [r"$\mathcal{M}_{13}$, Overshoot", r"$\mathcal{M}_{12}$, No overshoot"]

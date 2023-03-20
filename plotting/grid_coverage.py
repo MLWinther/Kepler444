@@ -1,9 +1,13 @@
-import os
 import h5py
 import numpy as np
 import matplotlib.pyplot as plt
 
 import basta.constants as bc
+
+#####################################################################
+# Corner plot of basis parameters for grid, for appendix C of paper #
+# out: grid_coverage.pdf                                            #
+#####################################################################
 
 def base_corner(baseparams, base, outbasename):
     _, parlab, _, _ = bc.parameters.get_keys([par for par in baseparams])

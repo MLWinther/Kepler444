@@ -71,12 +71,12 @@ def chi2_difference(obskey, obs, modkey, mod, tp=False, rtype='r012', corr=True,
     Calculates the chi2 difference between observations and model ratios given
     the fitting options.
     """
-    obsratio, cov, covinv = freq_fit.compute_ratios(
+    obsratio, cov = freq_fit.compute_ratios(
         obskey, obs, rtype, threepoint=tp
     )
     if not corr:
         cov = np.identity(cov.shape[0]) * cov
-        covinv = np.linalg.pinv(cov, rcond=1e-8)
+    covinv = np.linalg.pinv(cov, rcond=1e-8)
     
     modratio = freq_fit.compute_ratioseqs(modkey, mod, rtype, threepoint=tp)
     x = obsratio[0, :] - modratio[0, :]

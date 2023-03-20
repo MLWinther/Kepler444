@@ -10,9 +10,13 @@ rcset = {'xtick.direction': u'in', 'ytick.direction': u'in',
          'font.family': 'sans-serif', 'font.size': 18}
 plt.rcParams.update(rcset)
 
+######################################################################
+# Plot the variation of convective core lifetimes, figure 2 in paper #
+# out: fg_mcore_sample.pdf                                           #
+######################################################################
 
 Grid = h5py.File('../input/Garstec_AS09_Kepler444_diff.hdf5','r')
-Buldgen = np.loadtxt('../input/profile_Buldgen.txt', delimiter = ', ')
+Buldgen = np.loadtxt('../input/profile_Buldgen.txt', delimiter = ',')
 
 ypar = 'FeHini'
 

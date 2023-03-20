@@ -11,6 +11,11 @@ import basta.plot_seismic as plt_seis
 import basta.utils_seismic as su
 
 
+###############################################################################
+# Extract HLM and LCM of a given fit, and plot corrected/uncorrected echelles #
+# out: echelle_*.pdf                                                          #
+###############################################################################
+
 top = "/home/au540782/Kepler444/"
 
 numax = 4538
@@ -31,8 +36,8 @@ jsonfile = glob.glob(os.path.join(top, "all_combinations",
 
 selmod = fio.load_selectedmodels(jsonfile)
 
-pathPDF, indPDF = stats.get_highest_likelihood(grid, selmod, ["age", "agecore"])
-pathCHI, indCHI = stats.get_highest_likelihood(grid, selmod, ["age", "agecore"])
+pathPDF, indPDF = stats.most_likely(selmod)
+pathCHI, indCHI = stats.lowest_chi2(selmod)
 
 names = ["HLM", "LCM"]
 plotname = "plots/echelle_{:s}_{:s}.pdf"

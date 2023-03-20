@@ -12,6 +12,11 @@ rcset = {'xtick.direction': u'in', 'ytick.direction': u'in', "xtick.top": True,
          "ytick.right": True, "font.family":"sans-serif", 'font.size': 18}
 plt.rcParams.update(rcset)
 
+######################################################################################
+# Plot 3He equilibrium of test models using same input as model 13 from Buldgen 2019 #
+# Garstec simulations with/without overshooting. Figure A1 in paper                  #
+# out: buldgen_he3.pdf                                                               #
+######################################################################################
 
 path = 'He3models/Buldgen_{0}/'
 mods = [path.format(i) for i in ['00', '15']]

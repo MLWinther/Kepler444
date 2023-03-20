@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 # Set the style of all plots
 plt.style.use(os.path.join(os.environ['BASTADIR'], 'basta/plots.mplstyle'))
 
+####################################################
+# Helper functions for 3He equilibrium computation #
+####################################################
+
 def he3_frac_easy(xh, xhe4, temp):
 
     t = lambda w: 19.721*(w/temp*1e-7)**(1./3)

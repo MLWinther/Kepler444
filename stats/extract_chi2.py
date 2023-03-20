@@ -14,6 +14,12 @@ import basta.utils_seismic as su
 import basta.fileio as fio
 import basta.freq_fit as freq_fit
 
+##################################################################################
+# Plot and test individual chi2 values for each ratio mode, for referee response #
+# out: ratio_comparison.pdf                                                      #
+##################################################################################
+
+
 def xdiff(obsr, modr, intpol=False):
     if intpol:
         modratio = copy.deepcopy(obsr)
@@ -43,7 +49,7 @@ grid = h5py.File(gridfile, 'r')
 
 selmodfile = glob.glob(os.path.join(top, "all_combinations", "output_016_*", "*.json"))[0]
 selectedmodels = fio.load_selectedmodels(selmodfile)
-track, ind = stats.get_highest_likelihood(grid, selectedmodels, [])
+track, ind = stats.most_likely(selectedmodels)
 
 
 frefile = os.path.join(top, "input", "Kepler444.xml")
@@ -74,8 +80,8 @@ for j in range(2):
                         obs[1, nind] *= mult
 
         np.random.seed(444)
-        obsr012, cov, covinv = freq_fit.compute_ratios(obskey, obs, "r012")
-
+        obsr012, cov = freq_fit.compute_ratios(obskey, obs, "r012")
+        covinv = np.linalg.pinv(cov, rcond=1e-8)
 
         Hod    = su.transform_obj_array(grid[track]["osc"][ind])
         Hodkey = su.transform_obj_array(grid[track]["osckey"][ind])

@@ -15,7 +15,11 @@ import basta.utils_seismic as su
 # MANY functions in this
 import helpers
 
-# Compare BASTA and Buldgen fits
+########################################################################################
+# Main script for comparing BASTA and Buldgen fits, to produce table 2 and 3 in paper  #
+# Due to the random sampling of ratios, it will not be identical to paper/between runs #
+# out: latex-formatted print to terminal                                               #
+########################################################################################
 
 def FeH_from_ZX(ZX, m):
     buldalpha = {'13': "A09Pho_P02", '12': "A09Pho_P03"}
@@ -96,7 +100,7 @@ def compute_bchi2(top, frefile, notfile):
  
 
 top = '/home/au540782/Kepler444/'
-frefile = os.path.join(top, 'input/Kepler444_Campante.xml')
+frefile = os.path.join(top, 'input/Kepler444.xml')
 
 specobs = {"FeH": [-0.52, 0.12], "Teff": [5172, 75], "LPhot": [0.4, 0.04], 
            "logg": [4.595, 0.06], "rho": [2.496, 0.012], "MeH": [-0.37, 0.09]}
@@ -174,19 +178,22 @@ for rt in rtypes:
                 else:
                     wrstr += "\\transparent{0.4}x "
                 
-                # wrstr += " & "
+                """
+                # For comparing with increased errors
+                wrstr += " & "
 
-                # fmode = "_".join([rt, corr, trust, points, "increased"])
+                fmode = "_".join([rt, corr, trust, points, "increased"])
                 
-                # b12 = bchi2["freq"]["12"][fmode]
-                # b13 = bchi2["freq"]["13"][fmode]
+                b12 = bchi2["freq"]["12"][fmode]
+                b13 = bchi2["freq"]["13"][fmode]
                 
-                # if b12 < b13:
-                #     wrstr += "\\textbf{" + "{:.3f}".format(b12) + "}"
-                #     wrstr += " & {:.3f}".format(b13)
-                # else:
-                #     wrstr += "{:.3f} & ".format(b12)
-                #     wrstr += "\\textbf{" + "{:.3f}".format(b13) + "}"
+                if b12 < b13:
+                    wrstr += "\\textbf{" + "{:.3f}".format(b12) + "}"
+                    wrstr += " & {:.3f}".format(b13)
+                else:
+                    wrstr += "{:.3f} & ".format(b12)
+                    wrstr += "\\textbf{" + "{:.3f}".format(b13) + "}"
+                """
 
                 wrstr += " & "
 
@@ -211,11 +218,6 @@ for rt in rtypes:
 # Define grids and determine core types of tracks
 grids = [h5py.File(os.path.join(top, "input/Garstec_AS09_Kepler444_nodiff.hdf5"), 'r'),
          h5py.File(os.path.join(top, "input/Garstec_AS09_Kepler444_diff.hdf5"), 'r')]
-         #h5py.File(os.path.join(top, "input/Garstec_AS09_Kepler444.hdf5"), 'r')]
-#core_types = [determine_core_type(grids[0], interval=[1,9]),
-#              determine_core_type(grids[1], interval=[1,9])]
-#core_lifet = [determine_core_lifetime(grids[0]),
-#              determine_core_lifetime(grids[1])]
 
 
 path = "all_combinations"
@@ -267,12 +269,8 @@ for outdir in outdirs:
     diff = True if "diffusion" in keys else False
     if diff:
         grid = grids[1]
-        #ct = core_types[1]
-        #lft = core_lifet[1]
     else:
         grid = grids[0]
-        #ct = core_types[0]
-        #lft = core_lifet[0]
     
 
     # Get fit data
@@ -307,9 +305,6 @@ for outdir in outdirs:
             for key in fitparams:
                 modv = grid[track][key][ind]
                 bastanewchi[j] += chi2(modv, specobs[key])
-
-        #print(bastachi)
-        #print(bastanewchi)
 
     
     if rtype == "r02":
