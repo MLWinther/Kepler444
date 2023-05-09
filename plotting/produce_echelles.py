@@ -27,7 +27,7 @@ grid = h5py.File(os.path.join(top, "input",
 obskey, obs, _ = fio.read_freq(os.path.join(top, "input", "Kepler444.xml"),
                 nottrustedfile=os.path.join(top, "input", "nottrusted_Kepler444.fre"))
 
-fitnum = 16
+fitnum = 22
 jsonfile = glob.glob(os.path.join(top, "all_combinations", 
                      "output_{:03d}_*/*.json".format(fitnum)))[0]
 #jsonfile = glob.glob(os.path.join(top, "modelling", 

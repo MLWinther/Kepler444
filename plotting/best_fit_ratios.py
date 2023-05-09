@@ -23,7 +23,7 @@ plt.rcParams.update(rcset)
 # Reads the best-fit as the numbered output in all_combinations, default 16                      #
 # out: ratios.pdf                                                                                #
 ##################################################################################################
-outputnumber = 16
+outputnumber = 22
 
 cols = ['#332288', '#88CCEE', '#44AA99', '#117733', '#999933', '#DDCC77', '#CC6677', '#882255', '#AA4499']
 

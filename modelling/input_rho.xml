@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<stars>
+	<default>
+		<library path="/home/au540782/Kepler444/input/Garstec_AS09_Kepler444_diff.hdf5"/>
+		<output path="output_rho/"/>
+		<outputfile value="result.ascii"/>
+		<solardnu value="135.1"/>
+		<solarnumax value="3090.0"/>
+		<solarmodel value="True"/>
+		<missingval value="-999.999"/>
+		<plotfmt value="pdf"/>
+		<bayesianweights>
+			<True/>
+		</bayesianweights>
+		<fitparams>
+			<FeH/>
+			<Teff/>
+			<rho/>
+			<r012/>
+		</fitparams>
+		<priors>
+			<IMF/>
+			<dnufit min="175" max="185"/>
+		</priors>
+		<freqparams>
+			<correlations value="True"/>
+			<threepoint value="False"/>
+			<freqpath value="/home/au540782/Kepler444/input/"/>
+			<fcor value="BG14"/>
+			<bexp value="4.5"/>
+			<dnufrac value="0.5"/>
+			<intpol_ratios value="False"/>
+		</freqparams>
+		<distanceInput>
+			<filters>
+				<Mb_TYCHO/>
+				<Mv_TYCHO/>
+			</filters>
+			<dustframe value="icrs"/>
+		</distanceInput>
+		<cornerplots>
+			<FeH/>
+			<Teff/>
+			<rho/>
+			<r012/>
+			<age/>
+			<massfin/>
+			<ove/>
+			<gcut/>
+			<agecore/>
+			<distance/>
+		</cornerplots>
+		<kielplots>
+			<True/>
+		</kielplots>
+		<freqplots>
+			<True/>
+		</freqplots>
+		<outparams>
+			<Teff/>
+			<FeH/>
+			<MeH/>
+			<LPhot/>
+			<rho/>
+			<age/>
+			<massfin/>
+			<agecore/>
+			<gcut/>
+			<ove/>
+			<alphaMLT/>
+			<distance/>
+		</outparams>
+		<optionaloutputfiles>
+			<True/>
+		</optionaloutputfiles>
+	</default>
+	<star starid="Kepler444">
+		<FeH value="-0.52" error="0.12"/>
+		<Teff value="5172" error="75"/>
+		<rho value="2.495" error="0.012"/>
+		<Mb_TYCHO value="9.898" error="0.024"/>
+		<Mv_TYCHO value="8.925" error="0.015"/>
+		<RA value="289.753"/>
+		<DEC value="41.631"/>
+		<nottrustedfile value="/home/au540782/Kepler444/input/nottrusted_Kepler444.fre"/>
+		<dnu value="179.64"/>
+		<numax value="4538"/>
+	</star>
+</stars>
+
